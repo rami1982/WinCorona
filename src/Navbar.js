@@ -7,7 +7,7 @@ export default class Navbar extends Component {
 			<div>
 				<nav className="  navbar navbar-expand-lg navbar-light bg-light ">
 					<NavLink className="navbar-brand" to="/">
-						Navbar
+						Win Corona
 					</NavLink>
 					<button
 						className="navbar-toggler"
