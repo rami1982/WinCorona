@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './popupWapper.css';
 
-export class MainPage extends Component {
+export class FormPage extends Component {
 
     state = {
         
@@ -106,4 +106,4 @@ export class MainPage extends Component {
 	}
 }
 
-export default MainPage;
+export default FormPage;

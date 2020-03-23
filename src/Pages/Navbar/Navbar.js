@@ -29,8 +29,8 @@ export default class Navbar extends Component {
 								</NavLink>
 							</li>
 							<li className="nav-item active">
-								<NavLink className="nav-link " to="/reminder">
-									Reminder 
+								<NavLink className="nav-link " to="/formpage">
+									Form 
 								</NavLink>
 							</li>
 							<li className="nav-item">

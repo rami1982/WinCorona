@@ -4,7 +4,7 @@ import MainPage from './Pages/WelcomePage/MainPage';
 import Navbar from './Pages/Navbar/Navbar';
 import { Route, Switch} from 'react-router-dom';
 import SignInForm from './Pages/LoginPage/SignInForm';
-import ReminderPage from './Pages/ReminderPopUp/ReminderPage';
+import FormPage from './Pages/FormPage/ReminderPage';
 function App() {
   return (
     <div className="App">
@@ -12,7 +12,7 @@ function App() {
    
     <Switch>
 				<Route exact path="/" render={() => <MainPage />} />
-        <Route exact path="/reminder" render={() => <ReminderPage />} />
+        <Route exact path="/formpage" render={() => <FormPage />} />
         <Route exact path="/signin" render={() => <SignInForm    header="Sign In"/>} />
         <Route exact path="/Login" render={() => <SignInForm    header="Login"/>   } />
 
