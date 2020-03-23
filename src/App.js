@@ -1,9 +1,9 @@
 import React from 'react';
 import './App.css';
-import MainPage from './MainPage';
-import Navbar from './Navbar';
+import MainPage from './Pages/WelcomePage/MainPage';
+import Navbar from './Pages/Navbar/Navbar';
 import { Route, Switch} from 'react-router-dom';
-import SignInForm from './SignInForm';
+import SignInForm from './Pages/LoginPage/SignInForm';
 import ReminderPage from './Pages/ReminderPopUp/ReminderPage';
 function App() {
   return (
