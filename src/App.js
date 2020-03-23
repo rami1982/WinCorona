@@ -4,7 +4,9 @@ import MainPage from './MainPage';
 import Navbar from './Navbar';
 import { Route, Switch} from 'react-router-dom';
 import SignInForm from './SignInForm';
+
 function App() {
+
   return (
     <div className="App">
       <Navbar/>
@@ -19,7 +21,10 @@ function App() {
 					path="/user/:id"
 					render={(routeProps) => <Palette palette={findPalette(routeProps.match.params.id)} />}
 				/> */}
+        
 			</Switch>
+
+
     </div>
   );
 }

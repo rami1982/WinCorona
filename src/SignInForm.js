@@ -1,5 +1,17 @@
 import React, { Component } from 'react';
+import FacebookLogin from 'react-facebook-login';
+import { properties } from './properties.js';
+
 export class SignInForm extends Component {
+
+	fbLoginClicked() {
+
+	}
+  
+	fbLoginResponseCallback(response) {
+	  console.log(response);
+	}
+
 	render() {
 		return (
 			<div className="container vh-100">
@@ -9,6 +21,7 @@ export class SignInForm extends Component {
 				>
 					<div className="d-flex flex-column justify-content-center h-100">
 						<h1  className=" mb-5" >{this.props.header}</h1>
+
 						<form className="mt-5" >
 							<div className="form-group">
 								<label for="exampleInputEmail1">Email address</label>
@@ -37,6 +50,16 @@ export class SignInForm extends Component {
 								Submit
 							</button>
 						</form>
+						
+						<hr data-content="Or" class="hr-text" />
+
+						<FacebookLogin
+							appId={properties.FB_APP_ID}
+							autoLoad={true}
+							fields={properties.FB_LOGIN_FIELDS}
+							onClick={this.fbLoginClicked}
+							callback={this.fbLoginResponseCallback} />
+
 					</div>
 				</div>
 			</div>
