@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 
+import { connect } from 'react-redux';
+import * as actionType from '../../Store/actions';
+
 
 export class SignInForm extends Component {
 	
@@ -47,6 +50,19 @@ export class SignInForm extends Component {
 	}
 }
 
-export default SignInForm;
+const mapStateToProps = state => {
+	return {
+		page: state.page,
+		pageTitle: state.pageTitle,
+	}
+}
+
+const mapDispatchToProps = dispatch => {
+	return {
+		switchPageStatus: (page) => dispatch({type: actionType.CURRENT_PAGE, pageName: page}),
+	}
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(SignInForm);
 
 

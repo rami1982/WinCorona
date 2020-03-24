@@ -1,0 +1,104 @@
+.formWrapper{
+    display: inline-flex;
+    flex-direction: column;
+    width: 30%;
+    text-align: end;
+}
+
+.radioFever{
+    display: inline-grid;
+    padding: 1rem;
+    border-radius: 1rem;
+    margin: 0.5rem;
+    background-color: white;
+    border: rgba(128, 128, 128, 0.5) 1px solid;
+}
+
+.tempeture{
+    display: inline-grid;
+    padding: 1rem;
+    border-radius: 1rem;    
+    margin: 0.5rem;
+    background-color: white;
+    border: rgba(128, 128, 128, 0.5) 1px solid;
+}
+
+.tempeture input {
+    width: 100%;
+}
+
+.diagnostics{
+    display: inline-grid;
+    padding: 1rem;
+    border-radius: 1rem;    
+    margin: 0.5rem;
+    background-color: white;
+    border: rgba(128, 128, 128, 0.5) 1px solid;
+}
+
+.generalFeeling{
+    display: inline-grid;
+    padding: 1rem;
+    border-radius: 1rem;    
+    margin: 0.5rem;
+    background-color: white;
+    border: rgba(128, 128, 128, 0.5) 1px solid;
+}
+
+.bodyFeeling{
+    display: inline-grid;
+    padding: 1rem;
+    border-radius: 1rem;    
+    margin: 0.5rem;
+    background-color: white;
+    border: rgba(128, 128, 128, 0.5) 1px solid;
+}
+
+.capsOfTea{
+    display: inline-grid;
+    padding: 1rem;
+    border-radius: 1rem;    
+    margin: 0.5rem;
+    background-color: white;
+    border: rgba(128, 128, 128, 0.5) 1px solid;
+}
+
+
+
+.ingested{
+    display: inline-grid;
+    padding: 1rem;
+    border-radius: 1rem;    
+    margin: 0.5rem;
+    background-color: white;
+    border: rgba(128, 128, 128, 0.5) 1px solid;
+}
+
+.ingested div label{
+    margin-top: -8px;
+}
+
+.ingestedDiv div{
+    display: inline-flex;
+    align-content: stretch;
+}
+
+.soscial{
+    display: inline-grid;
+    padding: 1rem;
+    border-radius: 1rem;    
+    margin: 0.5rem;
+    background-color: white;
+    border: rgba(128, 128, 128, 0.2) 1px solid;
+}
+
+@media (max-width: 800px){
+    .formWrapper{
+        display: inline-flex;
+        flex-direction: column;
+        width: 95%;
+        text-align: end;
+    }
+}
+
+

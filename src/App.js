@@ -4,7 +4,8 @@ import MainPage from './Pages/WelcomePage/MainPage';
 import Navbar from './Pages/Navbar/Navbar';
 import { Route, Switch} from 'react-router-dom';
 import SignInForm from './Pages/LoginPage/SignInForm';
-import FormPage from './Pages/FormPage/ReminderPage';
+import FormPage from './Pages/FormPage/FormDaily';
+import OneTimeForm from './Pages/OneTimeForm/oneTimeForm';
 function App() {
   return (
     <div className="App">
@@ -13,6 +14,8 @@ function App() {
     <Switch>
 				<Route exact path="/" render={() => <MainPage />} />
         <Route exact path="/formpage" render={() => <FormPage />} />
+        <Route exact path="/onetimeform" render={() => <OneTimeForm />} />
+
         <Route exact path="/signin" render={() => <SignInForm    header="Sign In"/>} />
         <Route exact path="/Login" render={() => <SignInForm    header="Login"/>   } />
 
