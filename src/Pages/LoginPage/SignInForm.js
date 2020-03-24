@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-<<<<<<< HEAD:src/SignInForm.js
 import FacebookLogin from 'react-facebook-login';
-import { properties } from './properties.js';
+import { properties } from './../../properties.js';
+import GoogleLoginButton from './GoogleLoginButton/googleLoginButton';
+import './SignInForm.css';
 
 export class SignInForm extends Component {
 
@@ -13,12 +14,6 @@ export class SignInForm extends Component {
 	  console.log(response);
 	}
 
-=======
-import GoogleLoginButton from './GoogleLoginButton/googleLoginButton';
-
-export class SignInForm extends Component {
-	
->>>>>>> master:src/Pages/LoginPage/SignInForm.js
 	render() {
 		return (
 			<div className="container vh-100">
@@ -56,12 +51,15 @@ export class SignInForm extends Component {
 							<button type="submit" className="btn btn-primary">
 								Submit
 							</button>
-							<GoogleLoginButton/>
 						</form>
 						
 						<hr data-content="Or" class="hr-text" />
 
+						<GoogleLoginButton/>
+
 						<FacebookLogin
+							cssClass="fb-login-button"
+							icon="fa-facebook"
 							appId={properties.FB_APP_ID}
 							autoLoad={true}
 							fields={properties.FB_LOGIN_FIELDS}

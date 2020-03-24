@@ -3,14 +3,10 @@ import './App.css';
 import MainPage from './Pages/WelcomePage/MainPage';
 import Navbar from './Pages/Navbar/Navbar';
 import { Route, Switch} from 'react-router-dom';
-<<<<<<< HEAD
-import SignInForm from './SignInForm';
-
-=======
 import SignInForm from './Pages/LoginPage/SignInForm';
 import FormPage from './Pages/FormPage/ReminderPage';
 import GoogleLoginButton from './Pages/LoginPage/GoogleLoginButton/googleLoginButton';
->>>>>>> master
+
 function App() {
 
   return (
