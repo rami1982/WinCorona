@@ -1,0 +1,41 @@
+.formWrapper{
+    display: inline-flex;
+    flex-direction: column;
+    width: 30%;
+    text-align: end;
+}
+
+.radioFever{
+    display: inline-grid;
+    padding: 1rem;
+    border-radius: 1rem;
+    margin: 0.5rem;
+    background-color: aquamarine;
+}
+
+.tempeture{
+    display: inline-grid;
+    padding: 1rem;
+    border-radius: 1rem;    margin: 0.5rem;
+    background-color: aquamarine;
+}
+
+.tempeture input {
+    width: 100%;
+}
+
+.diagnostics{
+    display: inline-grid;
+    padding: 1rem;
+    border-radius: 1rem;    margin: 0.5rem;
+    background-color: aquamarine;
+}
+
+.generalFeeling{
+    display: inline-grid;
+    padding: 1rem;
+    border-radius: 1rem;    margin: 0.5rem;
+    background-color: aquamarine;
+}
+
+

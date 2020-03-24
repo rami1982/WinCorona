@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+<<<<<<< HEAD:src/SignInForm.js
 import FacebookLogin from 'react-facebook-login';
 import { properties } from './properties.js';
 
@@ -12,6 +13,12 @@ export class SignInForm extends Component {
 	  console.log(response);
 	}
 
+=======
+import GoogleLoginButton from './GoogleLoginButton/googleLoginButton';
+
+export class SignInForm extends Component {
+	
+>>>>>>> master:src/Pages/LoginPage/SignInForm.js
 	render() {
 		return (
 			<div className="container vh-100">
@@ -49,6 +56,7 @@ export class SignInForm extends Component {
 							<button type="submit" className="btn btn-primary">
 								Submit
 							</button>
+							<GoogleLoginButton/>
 						</form>
 						
 						<hr data-content="Or" class="hr-text" />
@@ -68,5 +76,3 @@ export class SignInForm extends Component {
 }
 
 export default SignInForm;
-
-

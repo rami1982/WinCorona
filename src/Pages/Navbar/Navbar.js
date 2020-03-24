@@ -28,6 +28,11 @@ export default class Navbar extends Component {
 									Home <span className="sr-only">(current)</span>
 								</NavLink>
 							</li>
+							<li className="nav-item active">
+								<NavLink className="nav-link " to="/formpage">
+									Form 
+								</NavLink>
+							</li>
 							<li className="nav-item">
 								<a className="nav-link" href="#">
 									Link
