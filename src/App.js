@@ -5,6 +5,7 @@ import Navbar from './Pages/Navbar/Navbar';
 import { Route, Switch} from 'react-router-dom';
 import SignInForm from './Pages/LoginPage/SignInForm';
 import FormPage from './Pages/FormPage/ReminderPage';
+import GoogleLoginButton from './Pages/LoginPage/GoogleLoginButton/googleLoginButton';
 function App() {
   return (
     <div className="App">
@@ -15,6 +16,7 @@ function App() {
         <Route exact path="/formpage" render={() => <FormPage />} />
         <Route exact path="/signin" render={() => <SignInForm    header="Sign In"/>} />
         <Route exact path="/Login" render={() => <SignInForm    header="Login"/>   } />
+        <Route exact path="/GoogleLogin" render={() => <GoogleLoginButton    header="GoogleLogin"/>   } />
 
 				{/* <Route
 					exact

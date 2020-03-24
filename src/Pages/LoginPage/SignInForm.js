@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import GoogleLoginButton from './GoogleLoginButton/googleLoginButton';
 
 export class SignInForm extends Component {
 	
@@ -39,6 +39,7 @@ export class SignInForm extends Component {
 							<button type="submit" className="btn btn-primary">
 								Submit
 							</button>
+							<GoogleLoginButton/>
 						</form>
 					</div>
 				</div>
@@ -48,5 +49,3 @@ export class SignInForm extends Component {
 }
 
 export default SignInForm;
-
-
