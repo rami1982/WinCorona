@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
+<<<<<<< HEAD
 
 import { connect } from 'react-redux';
 import * as actionType from '../../Store/actions';
-import GoogleLoginButton from './GoogleLoginButton/googleLoginButton';
 
+=======
+import GoogleLoginButton from './GoogleLoginButton/googleLoginButton';
+>>>>>>> 3f41bedc7687c542e3909bd088fd8ac85459f4e9
 
 export class SignInForm extends Component {
 	
@@ -52,6 +55,7 @@ export class SignInForm extends Component {
 	}
 }
 
+<<<<<<< HEAD
 const mapStateToProps = state => {
 	return {
 		page: state.page,
@@ -68,3 +72,6 @@ const mapDispatchToProps = dispatch => {
 export default connect(mapStateToProps, mapDispatchToProps)(SignInForm);
 
 
+=======
+export default SignInForm;
+>>>>>>> 3f41bedc7687c542e3909bd088fd8ac85459f4e9
