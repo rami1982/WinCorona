@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
 import { NavLink } from "react-router-dom";
 
-export default class Navbar extends Component {
+import { connect } from 'react-redux';
+import * as actionType from '../../Store/actions';
+
+export class Navbar extends Component {
 	render() {
 		return (
 			<div>
@@ -26,6 +29,16 @@ export default class Navbar extends Component {
 							<li className="nav-item active">
 								<NavLink className="nav-link" to="/">
 									Home <span className="sr-only">(current)</span>
+								</NavLink>
+							</li>
+							<li className="nav-item active">
+								<NavLink className="nav-link " to="/formpage">
+									Form 
+								</NavLink>
+							</li>
+							<li className="nav-item active">
+								<NavLink className="nav-link " to="/Onetimeform">
+									One Time Form 
 								</NavLink>
 							</li>
 							<li className="nav-item">
@@ -75,3 +88,18 @@ export default class Navbar extends Component {
 		);
 	}
 }
+
+const mapStateToProps = state => {
+	return {
+		page: state.page,
+		pageTitle: state.pageTitle,
+	}
+}
+
+const mapDispatchToProps = dispatch => {
+	return {
+		switchPageStatus: (page) => dispatch({type: actionType.CURRENT_PAGE, pageName: page}),
+	}
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Navbar);

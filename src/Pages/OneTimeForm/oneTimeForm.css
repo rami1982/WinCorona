@@ -1,0 +1,25 @@
+.formWrapper{
+    display: inline-flex;
+    flex-direction: column;
+    width: 30%;
+    text-align: end;
+}
+
+.basic{
+    display: inline-grid;
+    padding: 1rem;
+    border-radius: 1rem;
+    margin: 0.5rem;
+    background-color: white;
+    border: rgba(128, 128, 128, 0.5) 1px solid;
+}
+
+@media (max-width: 800px){
+    .formWrapper{
+        display: inline-flex;
+        flex-direction: column;
+        width: 95%;
+        text-align: end;
+    }
+}
+

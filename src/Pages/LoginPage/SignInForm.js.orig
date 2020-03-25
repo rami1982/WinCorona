@@ -1,5 +1,15 @@
 import React, { Component } from 'react';
+<<<<<<< HEAD
+
+import { connect } from 'react-redux';
+import * as actionType from '../../Store/actions';
+
+=======
+import GoogleLoginButton from './GoogleLoginButton/googleLoginButton';
+>>>>>>> 3f41bedc7687c542e3909bd088fd8ac85459f4e9
+
 export class SignInForm extends Component {
+	
 	render() {
 		return (
 			<div className="container vh-100">
@@ -36,6 +46,7 @@ export class SignInForm extends Component {
 							<button type="submit" className="btn btn-primary">
 								Submit
 							</button>
+							<GoogleLoginButton/>
 						</form>
 					</div>
 				</div>
@@ -44,6 +55,23 @@ export class SignInForm extends Component {
 	}
 }
 
+<<<<<<< HEAD
+const mapStateToProps = state => {
+	return {
+		page: state.page,
+		pageTitle: state.pageTitle,
+	}
+}
+
+const mapDispatchToProps = dispatch => {
+	return {
+		switchPageStatus: (page) => dispatch({type: actionType.CURRENT_PAGE, pageName: page}),
+	}
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(SignInForm);
+
+
+=======
 export default SignInForm;
-
-
+>>>>>>> 3f41bedc7687c542e3909bd088fd8ac85459f4e9

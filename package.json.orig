@@ -15,8 +15,12 @@
     "react-redux": "^7.2.0",
     "react-router": "^5.1.2",
     "react-router-dom": "^5.1.2",
+<<<<<<< HEAD
     "react-scripts": "3.4.0",
     "redux": "^4.0.5"
+=======
+    "react-scripts": "^3.4.0"
+>>>>>>> 3f41bedc7687c542e3909bd088fd8ac85459f4e9
   },
   "scripts": {
     "start": "react-scripts start",
