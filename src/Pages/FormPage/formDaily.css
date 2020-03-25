@@ -5,73 +5,13 @@
     text-align: end;
 }
 
-.radioFever{
-    display: inline-grid;
-    padding: 1rem;
-    border-radius: 1rem;
-    margin: 0.5rem;
-    background-color: white;
-    border: rgba(128, 128, 128, 0.5) 1px solid;
-}
-
-.tempeture{
+.basic {
     display: inline-grid;
     padding: 1rem;
     border-radius: 1rem;    
     margin: 0.5rem;
     background-color: white;
-    border: rgba(128, 128, 128, 0.5) 1px solid;
-}
-
-.tempeture input {
-    width: 100%;
-}
-
-.diagnostics{
-    display: inline-grid;
-    padding: 1rem;
-    border-radius: 1rem;    
-    margin: 0.5rem;
-    background-color: white;
-    border: rgba(128, 128, 128, 0.5) 1px solid;
-}
-
-.generalFeeling{
-    display: inline-grid;
-    padding: 1rem;
-    border-radius: 1rem;    
-    margin: 0.5rem;
-    background-color: white;
-    border: rgba(128, 128, 128, 0.5) 1px solid;
-}
-
-.bodyFeeling{
-    display: inline-grid;
-    padding: 1rem;
-    border-radius: 1rem;    
-    margin: 0.5rem;
-    background-color: white;
-    border: rgba(128, 128, 128, 0.5) 1px solid;
-}
-
-.capsOfTea{
-    display: inline-grid;
-    padding: 1rem;
-    border-radius: 1rem;    
-    margin: 0.5rem;
-    background-color: white;
-    border: rgba(128, 128, 128, 0.5) 1px solid;
-}
-
-
-
-.ingested{
-    display: inline-grid;
-    padding: 1rem;
-    border-radius: 1rem;    
-    margin: 0.5rem;
-    background-color: white;
-    border: rgba(128, 128, 128, 0.5) 1px solid;
+    border: rgba(128, 128, 128, 0.2) 1px solid;
 }
 
 .ingested div label{
@@ -83,14 +23,7 @@
     align-content: stretch;
 }
 
-.soscial{
-    display: inline-grid;
-    padding: 1rem;
-    border-radius: 1rem;    
-    margin: 0.5rem;
-    background-color: white;
-    border: rgba(128, 128, 128, 0.2) 1px solid;
-}
+
 
 @media (max-width: 800px){
     .formWrapper{
