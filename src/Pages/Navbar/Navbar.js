@@ -32,16 +32,16 @@ export class Navbar extends Component {
 								</NavLink>
 							</li>
 							<li className="nav-item active">
-								<NavLink className="nav-link " to="/formpage">
+								{/* <NavLink className="nav-link " to="/formpage">
 									Form 
-								</NavLink>
+								</NavLink> */}
 							</li>
 							<li className="nav-item active">
-								<NavLink className="nav-link " to="/Onetimeform">
+								{/* <NavLink className="nav-link " to="/Onetimeform">
 									One Time Form 
-								</NavLink>
+								</NavLink> */}
 							</li>
-							<li className="nav-item">
+							{/*<li className="nav-item">
 								<a className="nav-link" href="#">
 									Link
 								</a>
@@ -75,13 +75,13 @@ export class Navbar extends Component {
 								<a className="nav-link disabled" href="#">
 									Disabled
 								</a>
-							</li>
+							</li> */}
 						</ul>
-						<span class="navbar-text">
+						{/* <span class="navbar-text">
 						<NavLink className="nav-link " to="/signin">
      						 Sign-in/Login 
 							  </NavLink>
-    					</span>
+    					</span> */}
 					</div>
 				</nav>
 			</div>

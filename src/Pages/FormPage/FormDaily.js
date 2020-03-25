@@ -7,7 +7,7 @@ import * as actionType from '../../Store/actions';
 export class FormPage extends Component {
 
     state = {
-        
+
     }
 
 
@@ -15,36 +15,36 @@ export class FormPage extends Component {
 
     // BUTTONS HANDLERS
 
-    radioFeverHandler = () => {
-        console.log("radioFever");
+    radioFeverHandler = (e) => {
+        console.log(e.target.value);
     }
 
-    tempetureHandler = () => {
-        console.log("Tempeture")
+    tempetureHandler = (e) => {
+        console.log(e.target.value)
+    }
+    
+    diagnosticTypeHandler = (e) => {
+        console.log(e.target.value);
     }
 
-    diagnosticTypeHandler = () => {
-        console.log("diagnosticTypeHandler");
+    generalFeelingHandler = (e) => {
+        console.log(e.target.value);
     }
 
-    generalFeelingHandler = () => {
-        console.log("generalFeelingHandler");
+    bodyFeelingHandler = (e) => {
+        console.log(e.target.value);
     }
 
-    bodyFeelingHandler = () => {
-        console.log("bodyFeelingHandler");
+    capsOfTeaHandler = (e) => {
+        console.log(e.target.value);
     }
 
-    capsOfTeaHandler = () => {
-        console.log("capsOfTeaHandler");
+    ingestedHandler = (e) => {
+        console.log(e.target.value);
     }
 
-    ingestedHandler = () => {
-        console.log("ingestedHandler");
-    }
-
-    soscialHandler = () => {
-        console.log("soscialHandler");
+    soscialHandler = (e) => {
+        console.log(e.target.value);
     }
 
     
@@ -57,67 +57,67 @@ export class FormPage extends Component {
 			<div className="formWrapper">
 
                 {/* Radio button */}
-                <div className="radioFever">
+                <div className="basic radioFever">
                     <label>האם יש לך חום</label>
                     <div>
                         <label>לא &nbsp;&nbsp;</label>
-                        <input type='radio' name='a' onChange={this.radioFeverHandler} defaultChecked/>
+                        <input type='radio' name='fever' value="no" onChange={this.radioFeverHandler} defaultChecked/>
                     </div>
                     <div>
                         <label>כן &nbsp;&nbsp;</label>
-                        <input type='radio' name='a' onChange={this.radioFeverHandler}/>
+                        <input type='radio' name='fever' value="yes" onChange={this.radioFeverHandler}/>
                     </div>
                 </div>
 
                 {/* input Temeture */}
-                <div className="tempeture">
+                <div className="basic tempeture">
                     <label>טמפרטורת גוף</label>
                     <input type="text" onChange={this.tempetureHandler}/>
                 </div>
 
                 {/* diagnostic type */}
-                <div className="diagnostics">
+                <div className="basic diagnostics">
                     <label>איזה סוג של דיאגנוסטיק לקורונה עשית</label>
                     <div>
                         <label>לא עשיתי בדיקה &nbsp;&nbsp;</label>
-                        <input type='radio' name='a' onChange={this.diagnosticTypeHandler} defaultChecked/>
+                        <input type='radio' name='diagnostics' value="no" onChange={this.diagnosticTypeHandler} defaultChecked/>
                     </div>
                     <div>
                         <label>S &nbsp;&nbsp;</label>
-                        <input type='radio' name='a' onChange={this.diagnosticTypeHandler}/>
+                        <input type='radio' name='diagnostics' value="s" onChange={this.diagnosticTypeHandler}/>
                     </div>
                     <div>
                         <label>L &nbsp;&nbsp;</label>
-                        <input type='radio' name='a' onChange={this.diagnosticTypeHandler} defaultChecked/>
+                        <input type='radio' name='diagnostics' value="l" onChange={this.diagnosticTypeHandler} defaultChecked/>
                     </div>
                     <div>
                         <label>הבדיקה יצאה חיובית  &nbsp;&nbsp;</label>
-                        <input type='radio' name='a' onChange={this.diagnosticTypeHandler}/>
+                        <input type='radio' name='diagnostics' value="yes" onChange={this.diagnosticTypeHandler}/>
                     </div>
                 </div>
 
                 {/* General fealing */}
-                <div className="generalFeeling">
+                <div className="basic generalFeeling">
                     <label>מה ההרגשה הכללית שלך</label>
                     <div>
                         <label>1 &nbsp;&nbsp;</label>
-                        <input type='radio' name='a' onChange={this.generalFeelingHandler} defaultChecked/>
+                        <input type='radio' name='g_feeling' value="1" onChange={this.generalFeelingHandler} defaultChecked/>
                     </div>
                     <div>
                         <label>2 &nbsp;&nbsp;</label>
-                        <input type='radio' name='a' onChange={this.generalFeelingHandler}/>
+                        <input type='radio' name='g_feeling' value="2" onChange={this.generalFeelingHandler}/>
                     </div>
                     <div>
                         <label>3 &nbsp;&nbsp;</label>
-                        <input type='radio' name='a' onChange={this.generalFeelingHandler} defaultChecked/>
+                        <input type='radio' name='g_feeling' value="3" onChange={this.generalFeelingHandler} defaultChecked/>
                     </div>
                     <div>
                         <label>4  &nbsp;&nbsp;</label>
-                        <input type='radio' name='a' onChange={this.generalFeelingHandler}/>
+                        <input type='radio' name='g_feeling' value="4" onChange={this.generalFeelingHandler}/>
                     </div>
                     <div>
                         <label>5  &nbsp;&nbsp;</label>
-                        <input type='radio' name='a' onChange={this.generalFeelingHandler}/>
+                        <input type='radio' name='g_feeling' value="5" onChange={this.generalFeelingHandler}/>
                     </div>
                 </div>
 
@@ -126,115 +126,115 @@ export class FormPage extends Component {
 
 
                 {/* Body Feeling */}
-                <div className="bodyFeeling">
+                <div className="basic bodyFeeling">
                     <label>איך הגוף שלך מרגיש</label>
                     <div>
                         <label>1 &nbsp;&nbsp;</label>
-                        <input type='radio' name='a' onChange={this.bodyFeelingHandler} defaultChecked/>
+                        <input type='radio' name='b_feeling' value="1" onChange={this.bodyFeelingHandler}/>
                     </div>
                     <div>
                         <label>2 &nbsp;&nbsp;</label>
-                        <input type='radio' name='a' onChange={this.bodyFeelingHandler}/>
+                        <input type='radio' name='b_feeling' value="2" onChange={this.bodyFeelingHandler}/>
                     </div>
                     <div>
                         <label>3 &nbsp;&nbsp;</label>
-                        <input type='radio' name='a' onChange={this.bodyFeelingHandler}/>
+                        <input type='radio' name='b_feeling' value="3" onChange={this.bodyFeelingHandler}/>
                     </div>
                     <div>
                         <label>4  &nbsp;&nbsp;</label>
-                        <input type='radio' name='a' onChange={this.bodyFeelingHandler}/>
+                        <input type='radio' name='b_feeling' value="4" onChange={this.bodyFeelingHandler}/>
                     </div>
                     <div>
                         <label>5  &nbsp;&nbsp;</label>
-                        <input type='radio' name='a' onChange={this.bodyFeelingHandler}/>
+                        <input type='radio' name='b_feeling' value="5" onChange={this.bodyFeelingHandler}/>
                     </div>
                 </div>
 
                 {/* כמה כוסות תה שתית ב 24 השעות האחרונות */}
-                <div className="capsOfTea">
+                <div className="basic capsOfTea">
                     <label>כמה כוסות תה שתית ב 24 השעות האחרונות</label>
                     <div>
                         <label>0 &nbsp;&nbsp;</label>
-                        <input type='radio' name='a' onChange={this.capsOfTeaHandler}/>
+                        <input type='radio' name='tea' value="0" onChange={this.capsOfTeaHandler}/>
                     </div>
                     <div>
                         <label>1-3 &nbsp;&nbsp;</label>
-                        <input type='radio' name='a' onChange={this.capsOfTeaHandler} defaultChecked/>
+                        <input type='radio' name='tea' value="1-3" onChange={this.capsOfTeaHandler}/>
                     </div>
                     <div>
                         <label>3-6 &nbsp;&nbsp;</label>
-                        <input type='radio' name='a' onChange={this.capsOfTeaHandler}/>
+                        <input type='radio' name='tea' value="3-6" onChange={this.capsOfTeaHandler}/>
                     </div>
                     <div>
                         <label>7+ &nbsp;&nbsp;</label>
-                        <input type='radio' name='a' onChange={this.capsOfTeaHandler}/>
+                        <input type='radio' name='tea' value="7" onChange={this.capsOfTeaHandler}/>
                     </div>
                 </div>
 
                 {/* ingested  */}
-                <div className="ingested">
+                <div className="basic ingested">
                     <label>אלו מהדברים אכלת ב 24 השעות האחרונות</label>
                     <div className="ingestedDiv">
                         <div>
                             <label>בצל &nbsp;&nbsp;</label>
-                            <input type='radio' name='onion' onChange={this.ingestedHandler}/>
+                            <input type='checkbox' name='ingested' value="onion" onChange={this.ingestedHandler}/>
                         </div>
                         <div>
                             <label>שום &nbsp;&nbsp;</label>
-                            <input type='radio' name='garlic' onChange={this.ingestedHandler}/>
+                            <input type='checkbox' name='ingested' value="garlic" onChange={this.ingestedHandler}/>
                         </div>
                         <div>
                             <label>תה &nbsp;&nbsp;</label>
-                            <input type='radio' name='tea' onChange={this.ingestedHandler}/>
+                            <input type='checkbox' name='ingested' onChange={this.ingestedHandler}/>
                         </div>
                         <div>
                             <label>אלכוהול &nbsp;&nbsp;</label>
-                            <input type='radio' name='alcohol' onChange={this.ingestedHandler}/>
+                            <input type='checkbox' name='ingested' value="alcohol" onChange={this.ingestedHandler}/>
                         </div>
                         <div>
                             <label>סיגריות &nbsp;&nbsp;</label>
-                            <input type='radio' name='cigarettes' onChange={this.ingestedHandler}/>
+                            <input type='checkbox' name='cigarettes' value="sigarets" onChange={this.ingestedHandler}/>
                         </div>
                         <div>
                             <label>תרגול רוחני &nbsp;&nbsp;</label>
-                            <input type='radio' name='spiritual_practice' onChange={this.ingestedHandler}/>
+                            <input type='checkbox' name='ingested' value="speriat" onChange={this.ingestedHandler}/>
                         </div>
                         <div>
                             <label>לימון &nbsp;&nbsp;</label>
-                            <input type='radio' name='lemon' onChange={this.ingestedHandler}/>
+                            <input type='checkbox' name='lemon' value="lemon" onChange={this.ingestedHandler}/>
                         </div>
                         <div>
                             <label>דבש &nbsp;&nbsp;</label>
-                            <input type='radio' name='honey' onChange={this.ingestedHandler}/>
+                            <input type='checkbox' name='honey' value="honey" onChange={this.ingestedHandler}/>
                         </div>
                         <div>
                             <label>תרופה &nbsp;&nbsp;</label>
-                            <input type='radio' name='medicine' onChange={this.ingestedHandler}/>
+                            <input type='checkbox' name='medicine' value="medician" onChange={this.ingestedHandler}/>
                         </div>
                         <div>
                             <label>3 אומגה &nbsp;&nbsp;</label>
-                            <input type='radio' name='omega' onChange={this.ingestedHandler}/>
+                            <input type='checkbox' name='omega' value="3" onChange={this.ingestedHandler}/>
                         </div>
                         <div>
                             <label>D ויטמין  &nbsp;&nbsp;</label>
-                            <input type='radio' name='vitamin_d' onChange={this.ingestedHandler}/>
+                            <input type='checkbox' name='vitamin_d' value="d" onChange={this.ingestedHandler}/>
                         </div>
                         <div>
                             <label>C ויטמין  &nbsp;&nbsp;</label>
-                            <input type='radio' name='vitamin_c' onChange={this.ingestedHandler}/>
+                            <input type='checkbox' name='vitamin_c' value="c" onChange={this.ingestedHandler}/>
                         </div>
                         <div>
                             <label>B12 ויטמין  &nbsp;&nbsp;</label>
-                            <input type='radio' name='vitamin_b12' onChange={this.ingestedHandler}/>
+                            <input type='checkbox' name='vitamin_b12' value="b12" onChange={this.ingestedHandler}/>
                         </div>
                         <div>
                             <label>אחר ויטמין  &nbsp;&nbsp;</label>
-                            <input type='radio' name='vitamin_other' onChange={this.ingestedHandler}/>
+                            <input type='radio' name='vitamin_other' value="else_v" onChange={this.ingestedHandler}/>
                         </div>
                     </div>
 
 
-                    <div className="ingestedInput">
+                    <div className="basic ingestedInput">
                         <label>אחר</label>
                         <input type="text" onChange={this.ingestedHandler}/>
                     </div>
@@ -243,33 +243,33 @@ export class FormPage extends Component {
 
 
                  {/* Soscial */}
-                 <div className="soscial">
+                 <div className="basic soscial">
                     <label>אילו אינטרקציות חברתיות היו לך</label>
                     <div>
                         <label>דיבור בטלפון &nbsp;&nbsp;</label>
-                        <input type='radio' name='phone' onChange={this.soscialHandler} defaultChecked/>
+                        <input type='checkbox' name='phone' onChange={this.soscialHandler} defaultChecked/>
                     </div>
                     <div>
                         <label>פגישה עם אנשים &nbsp;&nbsp;</label>
-                        <input type='radio' name='person' onChange={this.soscialHandler}/>
+                        <input type='checkbox' name='person' value="people" onChange={this.soscialHandler}/>
                     </div>
                     <div>
                         <label>עבודה &nbsp;&nbsp;</label>
-                        <input type='radio' name='work' onChange={this.soscialHandler}/>
+                        <input type='checkbox' name='work' value="work" onChange={this.soscialHandler}/>
                     </div>
                     <div>
                         <label>חופשה  &nbsp;&nbsp;</label>
-                        <input type='radio' name='vacation' onChange={this.soscialHandler}/>
+                        <input type='checkbox' name='vacation' value="vacation" onChange={this.soscialHandler}/>
                     </div>
                     <div>
                         <label>משגיח על הילדים  &nbsp;&nbsp;</label>
-                        <input type='radio' name='kids' onChange={this.soscialHandler}/>
+                        <input type='checkbox' name='kids' value="kids" onChange={this.soscialHandler}/>
                     </div>
                     <div>
                         <label>חיות מחמד  &nbsp;&nbsp;</label>
-                        <input type='radio' name='pets' onChange={this.soscialHandler}/>
+                        <input type='checkbox' name='pets' value="pets" onChange={this.soscialHandler}/>
                     </div>
-                    <div className="ingestedInput">
+                    <div className="basic ingestedInput">
                         <label>אחר</label>
                         <input type="text" onChange={this.soscialHandler}/>
                     </div>
