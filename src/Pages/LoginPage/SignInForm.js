@@ -58,8 +58,7 @@ export class SignInForm extends Component {
 						<GoogleLoginButton/>
 
 						<FacebookLogin
-							cssClass="fb-login-button"
-							icon="fa-facebook"
+							cssClass="loginBtn loginBtn--facebook"
 							appId={properties.FB_APP_ID}
 							autoLoad={true}
 							fields={properties.FB_LOGIN_FIELDS}
