@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
 import { NavLink } from "react-router-dom";
 
-export default class Navbar extends Component {
+import { connect } from 'react-redux';
+import * as actionType from '../../Store/actions';
+
+export class Navbar extends Component {
 	render() {
 		return (
 			<div>
@@ -29,11 +32,16 @@ export default class Navbar extends Component {
 								</NavLink>
 							</li>
 							<li className="nav-item active">
-								<NavLink className="nav-link " to="/formpage">
+								{/* <NavLink className="nav-link " to="/formpage">
 									Form 
-								</NavLink>
+								</NavLink> */}
 							</li>
-							<li className="nav-item">
+							<li className="nav-item active">
+								{/* <NavLink className="nav-link " to="/Onetimeform">
+									One Time Form 
+								</NavLink> */}
+							</li>
+							{/*<li className="nav-item">
 								<a className="nav-link" href="#">
 									Link
 								</a>
@@ -67,16 +75,31 @@ export default class Navbar extends Component {
 								<a className="nav-link disabled" href="#">
 									Disabled
 								</a>
-							</li>
+							</li> */}
 						</ul>
-						<span class="navbar-text">
+						{/* <span class="navbar-text">
 						<NavLink className="nav-link " to="/signin">
      						 Sign-in/Login 
 							  </NavLink>
-    					</span>
+    					</span> */}
 					</div>
 				</nav>
 			</div>
 		);
 	}
 }
+
+const mapStateToProps = state => {
+	return {
+		page: state.page,
+		pageTitle: state.pageTitle,
+	}
+}
+
+const mapDispatchToProps = dispatch => {
+	return {
+		switchPageStatus: (page) => dispatch({type: actionType.CURRENT_PAGE, pageName: page}),
+	}
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Navbar);
