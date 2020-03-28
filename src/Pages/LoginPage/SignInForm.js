@@ -1,12 +1,8 @@
 import React, { Component } from 'react';
-<<<<<<< HEAD
 import FacebookLogin from 'react-facebook-login';
 import { properties } from './../../properties.js';
-=======
-
 import { connect } from 'react-redux';
 import * as actionType from '../../Store/actions';
->>>>>>> master
 import GoogleLoginButton from './GoogleLoginButton/googleLoginButton';
 import './SignInForm.css';
 
@@ -18,7 +14,8 @@ export class SignInForm extends Component {
 	}
   
 	fbLoginResponseCallback(response) {
-	  console.log(response);
+		postMessage(response, "http://localhost:3001/facebook/auth");
+	 	console.log(response);
 	}
 
 	render() {
