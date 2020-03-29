@@ -54,7 +54,7 @@ export class GoogleLoginButton extends Component {
 
 	render() {
         return (
-        <div class="google-login">
+        <div className="google-login">
             <button className="loginBtn loginBtn--google" ref="googleLoginBtn">
                                         Login with Google
                                     </button>            </div>
