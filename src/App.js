@@ -19,8 +19,8 @@ function App() {
         <Route exact path="/formpage" render={() => <FormPage />} />
         <Route exact path="/onetimeform" render={() => <OneTimeForm />} />
 
-        <Route exact path="/signin" render={() => <SignInForm    header="Sign In"/>} />
-        <Route exact path="/Login" render={() => <SignInForm    header="Login"/>   } />
+        <Route exact path="/signup"  component={SignInForm} />
+        <Route exact path="/signin" component={SignInForm} />
         <Route exact path="/GoogleLogin" render={() => <GoogleLoginButton    header="GoogleLogin"/>   } />
 
 				{/* <Route
