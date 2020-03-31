@@ -11,58 +11,74 @@ const Info = props => {
 
       <p>
         <br />
-        <h4>מהו נגיף (וירוס) קורונה?</h4> נגיפי קורונה הינם משפחה גדולה של
-        נגיפים (וירוסים) הידועים כגורמים למחלות בבעלי חיים ועלולים לגרום לתחלואה
-        גם בבני אדם. הם קיבלו את שמם עקב הדמיון שלהם במיקרוסקופ אלקטרוני לכתר
-        (קורונה בלטינית). חומרת הפגיעה של הנגיף בבני אדם משתנה בין הנגיפים
-        השונים במשפחה ונעה ממחלה קלה כגון הצטננות, למחלות עם הסתמנות קלינית קשה,
-        הפוגעות בריאות וגורמות לאי ספיקה רב מערכתית כגון, התסמונת הנשימתית המזרח
-        התיכונית (MERS) והתסמונת הנשימתית החמורה (SARS).
+        <h4>What is the coronavirus?</h4>
+        The coronavirus belongs to a large family of viruses identified as the
+        cause of certain animal diseases and it can cause disease in humans,
+        too. The name 'coronavirus' refers to their resemblance to a crown
+        ('corona' in Latin) when viewed in an electron microscope. The severity
+        of human illness depends on the particular virus strand of this family
+        and ranges between mild ailment, such as a cold, up to a serious disease
+        that can negatively affect the lungs and lead to multiple organ failure,
+        such as the Middle East Respiratory Syndrome (MERS) and Severe Acute
+        Respiratory Syndrome (SARS).
       </p>
       <p>
-        <h4>מהו נגיף קורונה novel corona virus 2019?</h4>
-        נגיף קורונה החדש לא זוהה בעבר כגורם למחלה בבני אדם. במהלך דצמבר 2019 הוא
-        החל הנגיף לגרום לצבר תחלואה בדלקת ריאות בעיר ווהאן אשר במחוז חוביי במרכז
-        סין, ולאחר מכן תוארה התפשטות של התחלואה לכל המחוזות בסין וכן למקומות
-        אחרים בעולם. מבין כל נגיפי קורונה אשר גורמים למחלה בבני אדם, נגיף ה-SARS
-        אשר גרם למחלה קשה בשנים 2003/4, הוא הדומה ביותר לנגיף קורונה החדש מבחינת
-        הרכבו הגנטי. ב-11.2.2020 ארגון הבריאות העולמי העניק שם רשמי לנגיף:
-        SARS-CoV-2, ולמחלה שהוא גורם: COVID-19. ב-11.3.2020 הכריז ארגון הבריאות
-        העולמי על התפרצות הקורונה כפנדמיה (מגפה).
+        <h4>What is the 2019 novel coronavirus?</h4>
+        The novel coronavirus had not been previously identified as a cause of
+        disease in humans. In December 2019, the coronavirus was identified as
+        the pathogen causing a cluster of pneumonia cases in Wuhan City, Hubei
+        province, central mainland China, and later on, it was found to spread
+        to all provinces of mainland China as well as internationally. In terms
+        of its genetic makeup, the SARS virus, which was the cause of severe
+        morbidity in 2003/4, is the most similar to the novel coronavirus in
+        China among all other coronaviruses that cause human morbidity. On
+        February 11 2020, the World Health Organization decided on an official
+        name for the virus - SARS-CoV-2, and the disease it causes - COVID-19.
+        On March 11 2020, the World Health Organization declared the COVID-19
+        outbreak was a pandemic.
       </p>
       <p>
-        <h4>כיצד בני אדם נדבקים בנגיף?</h4>
-        נגיף קורונה החדש לא זוהה בעבר כגורם למחלה בבני אדם. במהלך דצמבר 2019
-        הואהרוב המכריע של החולים הראשונים באירוע עבדו או ביקרו בשוק בעלי חיים
-        ופירות ים בווהאן. מכאן עלתה הסברה כי הנגיף עבר מבעלי חיים לאדם, אך עד כה
-        לא זוהה בוודאות איזה בעל חיים. כעת קיימת העברה של הנגיף מאדם לאדם. הנגיף
-        מופרש מדרכי הנשימה של אדם חולה בעיקר בעת עיטוש או שיעול והטיפות הניתזות
-        יכולות להישאף על ידי אנשים אחרים או לנחות על משטחים. אנשים אשר זמן קצר
-        לאחר מכן יגעו במשטחים אלה ובהמשך יגעו בפה, באף או בעיניים של עצמם עלולים
-        להידבק. כל מגע גופני בין בני אדם ללא חציצה כמו נשיקה, חיבוק, יחסי מין
-        ואף לחיצת יד, עלול להיות מדבק. טרם הוברר עד כמה המחלה מדבקת, אך בשלב זה
-        נראה כי רמת ההדבקה דומה לפחות לזו של נגיף השפעת. הדבקה מחולים אשר
-        התסמינים שלהם קלים ביותר אפשרית.
+        <h4>How is the novel coronavirus transmitted to humans?</h4>
+        The vast majority of the first patients in this event either worked in
+        the livestock and seafood market in Wuhan or visited it. Hence the
+        hypothesis, that the virus spread from animals to human beings, but thus
+        far, it was impossible to identify with certainty which animal.
+        Currently, the transmission of the virus is from person to person. The
+        virus can exit the body from a sick person's respiratory tracts, mainly
+        when sneezing or coughing. The dispersed droplets can be inhaled by
+        other people or land on surfaces. People who shortly after that inhale
+        these droplets or touch these surfaces and subsequently touch their
+        mouths, noses, or eyes may become infected. Any person-to-person
+        physical contact, such as kissing, hugging, having sex and hand shaking,
+        without protection, is potentially infectious. It has yet to be
+        determined how infectious this disease is, but at this stage, it seems
+        that its level of infection is at least similar to that of the influenza
+        virus. It is possible to become infected from patients with very mild
+        symptoms.
       </p>
       <p>
-        <h4>מהם תסמיני המחלה? ועד כמה היא חמורה?</h4>
-        חלק משמעותי מן הנדבקים בנגיף הקורונה אינם מפתחים תסמינים כלל. בקרב
-        החולים סימני המחלה דומים לאלו של שפעת. למעשה, לא ניתן לרוב להבדיל ללא
-        בדיקה ייעודית בין הדבקה בנגיף קורונה לבין מחלות נשימתיות רבות אחרות.
-        התסמינים השכיחים ביותר של המחלה הם חום, עייפות ושיעול יבש. אחד מכל שישה
-        חולים יפתח מחלה קשה שתתבטא בקשיי נשימה. מבוגרים, חולים במחלות כרוניות
-        דוגמת מחלת לב או סכרת ואנשים הסובלים מפגיעה במערכת החיסון נוטים יותר
-        לפתח מחלה קשה. במקרים החמורים ביותר המחלה עלולה להוביל לדלקת ריאות קשה,
-        לתסמונת נשימתית חמורה, לאי ספיקת כליות ואף למוות. שיעור התמותה מהמחלה
-        מוערך בכ-2% מהחולים, אך יש שונות גדולה מאד בנתונים המגיעים ממדינות
-        שונות. חשוב לציין כי מאחר ורבים מהנדבקים אינם מפתחים תסמינים ניתן להניח
-        כי שיעור התמותה מבין הנדבקים הוא נמוך יותר.
+        <h4>What are the symptoms of the infection? And how severe is it?</h4>A
+        significant part of all people infected with coronavirus do not develop
+        symptoms at all. Among the sick, the symptoms of the disease are similar
+        to those of influenza. As a matter of fact, it is usually impossible to
+        differentiate between infection with the coronavirus and many other
+        respiratory illnesses without a specific laboratory test. The most
+        common symptoms of the infection are fever, fatigue, and dry coughing.
+        One in six patients will develop severe symptoms manifested in labored
+        breathing. Older adults, people with chronic diseases such as heart
+        condition or diabetes, and people with compromised immune systems tend
+        to develop severe symptoms. In the most extreme cases, the infection may
+        cause acute pneumonia, severe respiratory syndrome, renal insufficiency,
+        and even death. The disease's mortality rate is estimated at about 2% of
+        the patients. However, the variance between places is large. Note that
+        since many of those infected do not develop any symptoms, it may be
+        assumed that the mortality rate among those infected is lower.
       </p>
 
       <iframe
         width="700"
         height="415"
-        src="https://www.youtube.com/embed/Ex-7qYdBXYI"
+        src="https://www.youtube.com/embed/LCqpTWrRMGE"
         frameborder="0"
         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen
