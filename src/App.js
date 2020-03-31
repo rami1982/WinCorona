@@ -16,8 +16,15 @@ function App() {
     <Switch>
 				<Route exact path="/" render={() => <MainPage />} />
         <Route exact path="/formpage" render={() => <FormPage />} />
+<<<<<<< HEAD
         <Route exact path="/signin" render={() => <SignInForm    header="Sign In"/>} />
         <Route exact path="/Login" render={() => <SignInForm    header="Login"/>   } />
+=======
+        <Route exact path="/onetimeform" render={() => <OneTimeForm />} />
+
+        <Route exact path="/signup"  component={SignInForm} />
+        <Route exact path="/signin" component={SignInForm} />
+>>>>>>> master
         <Route exact path="/GoogleLogin" render={() => <GoogleLoginButton    header="GoogleLogin"/>   } />
         <Route exact path="/auth/facebook" render={() => <FacebookLogin    header="FacebookLogin"/>   } />
 
