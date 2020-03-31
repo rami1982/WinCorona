@@ -10,7 +10,7 @@ export class Navbar extends Component {
 			<div>
 				<nav className="  navbar navbar-expand-lg navbar-light bg-light ">
 					<NavLink className="navbar-brand" to="/">
-						Win Corona
+						<img src='/images/logo.png' style={{height:'50px'}} /> Win Corona
 					</NavLink>
 					<button
 						className="navbar-toggler"

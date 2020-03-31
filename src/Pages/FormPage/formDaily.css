@@ -1,7 +1,30 @@
+.speech-bubble {
+	position: relative;
+	background: #26325B;
+    border-radius: .4em;
+    padding: 15px;
+    height: fit-content;
+}
+
+.speech-bubble:after {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 50%;
+	width: 0;
+	height: 0;
+	border: 1.094em solid transparent;
+	border-right-color: #26325B;
+	border-left: 0;
+	border-top: 0;
+	margin-top: -0.547em;
+	margin-left: -1.094em;
+}
+
+
 .formWrapper{
     display: inline-flex;
     flex-direction: column;
-    width: 30%;
     text-align: end;
 }
 

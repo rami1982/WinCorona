@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import MainPage from './Pages/WelcomePage/MainPage';
+// import MainPage from './Pages/WelcomePage/MainPage';
 import Navbar from './Pages/Navbar/Navbar';
 import { Route, Switch} from 'react-router-dom';
 import SignInForm from './Pages/LoginPage/SignInForm';
@@ -20,7 +20,7 @@ function App() {
         <Route exact path="/formpage" render={() => <FormPage />} />
         <Route exact path="/onetimeform" render={() => <OneTimeForm />} />
 
-        <Route exact path="/home" render={() => <MainPage />} />
+        {/* <Route exact path="/home" render={() => <MainPage />} /> */}
 
         <Route exact path="/signin" render={() => <SignInForm    header="Sign In"/>} />
         <Route exact path="/Login" render={() => <SignInForm    header="Login"/>   } />
