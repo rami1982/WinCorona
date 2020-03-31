@@ -54,7 +54,6 @@ const GoogleLoginButton = props => {
     })(document, "script", "google-jssdk");
   };
 
-<<<<<<< HEAD
   return (
     <div class="google-login">
       <button className="loginBtn loginBtn--google" ref="googleLoginBtn">
@@ -63,17 +62,5 @@ const GoogleLoginButton = props => {
     </div>
   );
 };
-=======
-	render() {
-        return (
-        <div className="google-login">
-            <button className="loginBtn loginBtn--google" ref="googleLoginBtn">
-                                        Login with Google
-                                    </button>            </div>
-                         
-        );
-	}
-}
->>>>>>> e6137abce1c28b146aedc2af6b6469612c784b04
 
 export default GoogleLoginButton;

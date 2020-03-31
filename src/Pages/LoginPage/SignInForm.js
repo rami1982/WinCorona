@@ -38,7 +38,7 @@ import api from "../../Store/api";
 //               />
 //             </div>
 
-class SignInForm extends Component {
+class SignInForm extends React.Component {
   signup = this.props.location.pathname.split("/")[1] === "signup";
 
   handleSubmit = async event => {
