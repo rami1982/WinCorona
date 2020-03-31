@@ -4,6 +4,7 @@ import { properties } from './../../properties.js';
 import { connect } from 'react-redux';
 import * as actionType from '../../Store/actions';
 import GoogleLoginButton from './GoogleLoginButton/googleLoginButton';
+import axios from 'axios';
 import './SignInForm.css';
 import api from '../../Store/api';
 
@@ -15,7 +16,17 @@ export class SignInForm extends Component {
 	}
   
 	fbLoginResponseCallback(response) {
-		postMessage(response, "http://localhost:3001/facebook/auth");
+		// postMessage(response, "https://localhost:3001/facebook/auth");
+		
+
+		axios
+        .post("http://localhost:3001/auth/fb", response)
+        .then(res => {
+            if (!res.data) {
+                console.log(res);
+            }
+		});
+		
 	 	console.log(response);
 	}
 

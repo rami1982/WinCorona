@@ -77,11 +77,11 @@ export class Navbar extends Component {
 								</a>
 							</li> */}
 						</ul>
-						{/* <span class="navbar-text">
+						<span class="navbar-text">
 						<NavLink className="nav-link " to="/signin">
      						 Sign-in/Login 
 							  </NavLink>
-    					</span> */}
+    					</span> 
 					</div>
 				</nav>
 			</div>
