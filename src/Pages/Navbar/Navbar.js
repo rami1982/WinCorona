@@ -37,7 +37,7 @@ export class Navbar extends Component {
 								</NavLink> */}
 							</li>
 							<li className="nav-item active">
-								{/* <NavLink className="nav-link " to="/Onetimeform">
+								{/* <NavLink className="nav-link " to="/home">
 									One Time Form 
 								</NavLink> */}
 							</li>

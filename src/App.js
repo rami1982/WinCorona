@@ -6,6 +6,7 @@ import { Route, Switch} from 'react-router-dom';
 import SignInForm from './Pages/LoginPage/SignInForm';
 import FormPage from './Pages/FormPage/FormDaily';
 import OneTimeForm from './Pages/OneTimeForm/oneTimeForm';
+import HomePage from '../src/Pages/HomePage/HomePage';
 
 
 import GoogleLoginButton from './Pages/LoginPage/GoogleLoginButton/googleLoginButton';
@@ -15,9 +16,11 @@ function App() {
       <Navbar/>
    
     <Switch>
-				<Route exact path="/" render={() => <MainPage />} />
+				<Route exact path="/" render={() => <HomePage />} />
         <Route exact path="/formpage" render={() => <FormPage />} />
         <Route exact path="/onetimeform" render={() => <OneTimeForm />} />
+
+        <Route exact path="/home" render={() => <MainPage />} />
 
         <Route exact path="/signin" render={() => <SignInForm    header="Sign In"/>} />
         <Route exact path="/Login" render={() => <SignInForm    header="Login"/>   } />
