@@ -9,13 +9,14 @@ import OneTimeForm from "./Pages/OneTimeForm/oneTimeForm";
 import GoogleLoginButton from "./Pages/LoginPage/GoogleLoginButton/googleLoginButton";
 import Info from "./Pages/Info/Info";
 import Tips from "./Pages/Tips/tips";
+import HomePage from './Pages/HomePage/HomePage';
 function App() {
   return (
     <div className="App">
       <Navbar />
 
       <Switch>
-        <Route exact path="/" component={MainPage} />
+        <Route exact path="/" component={HomePage} />
         <Route exact path="/formpage" component={FormPage} />
         <Route exact path="/onetimeform" component={OneTimeForm} />
         <Route exact path="/signup" component={SignInForm} />
