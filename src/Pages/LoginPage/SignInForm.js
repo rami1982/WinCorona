@@ -8,11 +8,6 @@ import axios from 'axios';
 import './SignInForm.css';
 import api from '../../Store/api';
 
-import { connect } from "react-redux";
-import * as actionType from "../../Store/actions";
-import GoogleLoginButton from "./GoogleLoginButton/googleLoginButton";
-import api from "../../Store/api";
-
 // const SignInForm = props => {
 //   return (
 //     <div className="container vh-100">
