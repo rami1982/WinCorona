@@ -74,15 +74,16 @@ const Info = props => {
         since many of those infected do not develop any symptoms, it may be
         assumed that the mortality rate among those infected is lower.
       </p>
-
-      <iframe
-        width="700"
-        height="415"
-        src="https://www.youtube.com/embed/LCqpTWrRMGE"
-        frameborder="0"
-        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen
-      ></iframe>
+      <div className="iframe-container">
+        <iframe
+          width="700"
+          height="415"
+          src="https://www.youtube.com/embed/LCqpTWrRMGE"
+          frameborder="0"
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </div>
     </section>
   );
 };
