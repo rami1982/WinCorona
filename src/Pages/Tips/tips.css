@@ -1,0 +1,30 @@
+.tips-container {
+  text-align: center;
+  /* background-color: #343a40; */
+}
+.faq-container {
+  margin-top: 50px;
+}
+.faq-container .btn-drop {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.iframe-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  height: 0;
+}
+.iframe-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.who-link {
+  margin-top: 50px;
+}
+#faq-title {
+  color: #ff3372;
+}
