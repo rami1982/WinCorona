@@ -45,8 +45,9 @@ const FormPage = props => {
     inputState.id_7 = values[6];
     inputState.id_8 = values[7];
     inputState.id_9 = values[8];
-
-    alert(`Chat handleEnd callback! Number: ${values[0]}`);
+    
+    alert(`תודה רבה על מילוי השאלון`);
+    //alert(`Chat handleEnd callback! Number: ${values[0]}`);
   }
 
 
