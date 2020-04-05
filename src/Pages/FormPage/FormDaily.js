@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./formDaily.css";
 import { ThemeProvider } from 'styled-components';
 
@@ -21,21 +21,44 @@ const theme = {
 
 const FormPage = props => {
 
+  const inputState = useState({
+    id_1: '',
+    id_2: '',
+    id_3: '',
+    id_4: '',
+    id_5: '',
+    id_6: '',
+    id_7: '',
+    id_8: '',
+    id_9: '',
+  });
+
   //handle end callback from chatbots
   function handleEnd({ steps, values }) {
-    // console.log(steps);
-     console.log(values);
+
+    inputState.id_1 = values[0];
+    inputState.id_2 = values[1];
+    inputState.id_3 = values[2];
+    inputState.id_4 = values[3];
+    inputState.id_5 = values[4];
+    inputState.id_6 = values[5];
+    inputState.id_7 = values[6];
+    inputState.id_8 = values[7];
+    inputState.id_9 = values[8];
+
     alert(`Chat handleEnd callback! Number: ${values[0]}`);
   }
 
+
   return (
+
     <div style={{width:'100%',margin:'10px auto',maxWidth:'500px'}}>
       {/* Radio button */}
       <ThemeProvider theme={theme}>
       <ChatBot headerTitle=''
-      width="100%"
-      hideHeader
-      botAvatar="/images/docFace.png"
+        width="100%"
+        hideHeader
+        botAvatar="/images/docFace.png"
         steps={questions}
         handleEnd={handleEnd}
         />

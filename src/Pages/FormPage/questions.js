@@ -1,9 +1,9 @@
 export const questions = [
-    {
-        id: '1',
-        message:'האם יש לך תסמינים של שפעת/וירוס/קורונה ',
-        trigger: '2'
-      },
+  {
+    id: '1',
+    message:'האם יש לך תסמינים של שפעת/וירוס/קורונה ',
+    trigger: '2'
+  },
   {
     id: '2',
     options: [
