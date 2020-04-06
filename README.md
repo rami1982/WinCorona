@@ -67,3 +67,8 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+
+### for nginx reverse proxy isnatllation instructions (configuring port 80 to redirect to 3000):
+https://www.tecmint.com/nginx-as-reverse-proxy-for-nodejs-app/
+
