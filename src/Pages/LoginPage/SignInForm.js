@@ -62,27 +62,6 @@ class SignInForm extends React.Component {
 	 	console.log(response);
 	}
 
-  signup = this.props.location.pathname.split("/")[1] === "signup";
-
-  handleSubmit = async event => {
-    event.preventDefault();
-    console.log(event.target.email.value);
-    console.log(event.target.password.value);
-    const path = `/auth/${this.signup ? "signup" : "signin"}`;
-    api
-      .post(path, {
-        email: event.target.email.value,
-        password: event.target.password.value
-      })
-      .then(() => {
-        console.log("success");
-      })
-      .catch(error => {
-        console.log(error);
-      });
-  };
-
-
   render() {
     console.log(this.props);
 
