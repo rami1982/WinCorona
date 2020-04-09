@@ -10,24 +10,8 @@ import GoogleLoginButton from "./Pages/LoginPage/GoogleLoginButton/googleLoginBu
 import Info from "./Pages/Info/Info";
 import Tips from "./Pages/Tips/tips";
 import HomePage from './Pages/HomePage/HomePage';
-import api from './Store/api';
 
 function App() {
-
-  api.post('http://localhost:1337/parse/users', {
-    username: '123456',
-    password: '123456'
-  },
-  {
-    headers: {'X-Parse-Revocable-Session':1}
-  })
-  .then((response) => {
-    api.defaults.headers.common['X-Parse-Session-Token'] = response.data.sessionToken;
-    console.log(response);
-  })
-  .catch(error => {
-    console.log(error);
-  });
 
   return (
     <div className="App">
