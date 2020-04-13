@@ -12,7 +12,7 @@ const Navbar = () => {
   if(token){
     api.defaults.headers.common['X-Parse-Session-Token'] = token;
   }
-  else{api.post('http://localhost:1337/parse/users', {
+  else{api.post('/users', {
       username: '123456',
       password: '123456'
     },
