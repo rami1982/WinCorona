@@ -46,15 +46,15 @@ const OneTimeForm = props => {
   const [questions, setQuestions] = React.useState([]);
 
   useEffect(async () => {
-    const result = await api.post('functions/one_time',);
+    const result = await api.post('functions/one_time_heb',);
     setQuestions(result.data.result.questions);
   },[]);
 
   const Question = ({question, input})=><div className="basic">
     <label>{question}</label>
-    {Object.entries(input).map(entry=>{
+    {Object.entries(input).map((entry, i)=>{
       if(entry[0]==='radio'){
-        return entry[1].map(choice=><div>
+        return entry[1].map((choice, j)=><div>
           <label>{choice} &nbsp;&nbsp;</label>
           <input type="radio" name={choice} />
         </div>)
