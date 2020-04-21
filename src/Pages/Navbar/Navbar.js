@@ -5,31 +5,36 @@ import * as actionType from "../../Store/actions";
 
 import il_icon from "../../img/il_icon.png";
 import us_icon from "../../img/us_icon.png";
-<<<<<<< HEAD
-import api from '../../Store/api';
-=======
+import api from "../../Store/api";
 import win_logo from "../../img/wincoronalogo.png";
->>>>>>> app_logo
 
 const Navbar = () => {
-  const token = localStorage.getItem('X-Parse-Session-Token');
-  if(token){
-    api.defaults.headers.common['X-Parse-Session-Token'] = token;
-  }
-  else{api.post('/users', {
-      username: '123456',
-      password: '123456'
-    },
-    {
-      headers: {'X-Parse-Revocable-Session':1}
-    })
-    .then((response) => {
-      localStorage.setItem('X-Parse-Session-Token', response.data.sessionToken);
-      api.defaults.headers.common['X-Parse-Session-Token'] = response.data.sessionToken;
-    })
-    .catch(error => {
-      console.log(error);
-    });
+  const token = localStorage.getItem("X-Parse-Session-Token");
+  if (token) {
+    api.defaults.headers.common["X-Parse-Session-Token"] = token;
+  } else {
+    api
+      .post(
+        "/users",
+        {
+          username: "123456",
+          password: "123456",
+        },
+        {
+          headers: { "X-Parse-Revocable-Session": 1 },
+        }
+      )
+      .then((response) => {
+        localStorage.setItem(
+          "X-Parse-Session-Token",
+          response.data.sessionToken
+        );
+        api.defaults.headers.common["X-Parse-Session-Token"] =
+          response.data.sessionToken;
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   }
 
   const [lang, setLang] = useState("HE");

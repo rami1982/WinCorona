@@ -56,8 +56,6 @@ class SignInForm extends React.Component {
     console.log(response);
   }
 
-<<<<<<< HEAD
-=======
   signup = this.props.location.pathname.split("/")[1] === "signup";
 
   handleSubmit = async (event) => {
@@ -78,7 +76,6 @@ class SignInForm extends React.Component {
       });
   };
 
->>>>>>> app_logo
   render() {
     console.log(this.props);
 
