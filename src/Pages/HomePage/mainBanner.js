@@ -1,8 +1,9 @@
 import React, { Component } from "react";
 import logo from "./assets/images/01.png";
 import "./homePage.css";
+import win_logo from "./assets/images/wincoronalogo.png";
 
-const MainBanner = props => {
+const MainBanner = (props) => {
   const { confirmed } = props;
   return (
     <section class="banner-section pb-0">
@@ -12,7 +13,7 @@ const MainBanner = props => {
             <div class="col-12">
               <div class="content-part text-center">
                 <div class="section-header">
-                  <h2>COVID-19 Tracker</h2>
+                  <img src={win_logo}></img>
                   <h3>Total Confirmed Corona Cases</h3>
                   <h2 class="count-people">{confirmed}</h2>
                 </div>

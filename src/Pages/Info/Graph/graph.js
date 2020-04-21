@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Doughnut } from "react-chartjs-2";
 
-const Graph = props => {
+const Graph = (props) => {
   const [confirmed, setConfirmed] = useState(0);
   const [recovered, setRecovered] = useState(0);
   const [deaths, setDeaths] = useState(0);
@@ -11,7 +11,9 @@ const Graph = props => {
       const response = await fetch("https://covid19.mathdro.id/api");
       const data = await response.json();
       console.log(data);
-      setConfirmed(data.confirmed.value);
+      setConfirmed(
+        data.confirmed.value - (data.recovered.value + data.deaths.value)
+      );
       setRecovered(data.recovered.value);
       setDeaths(data.deaths.value);
     }
@@ -24,9 +26,9 @@ const Graph = props => {
       {
         data: [confirmed, recovered, deaths],
         backgroundColor: ["orange", "green", "red"],
-        hoverBackgroundColor: ["gray", "gray", "gray"]
-      }
-    ]
+        hoverBackgroundColor: ["gray", "gray", "gray"],
+      },
+    ],
   };
 
   return (
