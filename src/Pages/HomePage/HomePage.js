@@ -13,7 +13,7 @@ const HomePage = () => {
   const [deaths, setDeaths] = useState(0);
   const [active, setActive] = useState(0);
 
-  const thousands_separators = num => {
+  const thousands_separators = (num) => {
     var num_parts = num.toString().split(".");
     num_parts[0] = num_parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
     return num_parts.join(".");
@@ -23,7 +23,6 @@ const HomePage = () => {
     async function fetchData() {
       const response = await fetch("https://covid19.mathdro.id/api");
       const data = await response.json();
-      console.log(data);
       setConfirmed(data.confirmed.value);
       setRecovered(data.recovered.value);
       setDeaths(data.deaths.value);

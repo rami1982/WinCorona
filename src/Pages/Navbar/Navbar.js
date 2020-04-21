@@ -5,6 +5,7 @@ import * as actionType from "../../Store/actions";
 
 import il_icon from "../../img/il_icon.png";
 import us_icon from "../../img/us_icon.png";
+import win_logo from "../../img/wincoronalogo.png";
 
 const Navbar = () => {
   const [lang, setLang] = useState("HE");
@@ -16,10 +17,9 @@ const Navbar = () => {
   return (
     <div>
       <nav className="navbar navbar-expand-lg navbar-light bg-light ">
-        <span style={{ margin: 5 + "px" }}>
+        {/* <span class="navbar-text" style={{ margin: 5 + "px" }}>
           {lang === "HE" ? (
             <div
-              // href="/info-en"
               onClick={() => {
                 language("EN");
               }}
@@ -28,7 +28,6 @@ const Navbar = () => {
             </div>
           ) : (
             <div
-              // href="/-en"
               onClick={() => {
                 language("HE");
               }}
@@ -36,10 +35,10 @@ const Navbar = () => {
               <img src={us_icon}></img>
             </div>
           )}
-        </span>
+        </span> */}
 
         <NavLink className="navbar-brand" to="/">
-          Win Corona
+          <img src={win_logo} style={{ height: 30 + "px" }}></img>
         </NavLink>
 
         <button
@@ -56,11 +55,11 @@ const Navbar = () => {
 
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav mr-auto">
-            <li className="nav-item active">
+            {/* <li className="nav-item active">
               <NavLink className="nav-link" to="/">
                 Home <span className="sr-only">(current)</span>
               </NavLink>
-            </li>
+            </li> */}
             <li className="nav-item active">
               <NavLink className="nav-link " to="/formpage">
                 Form
