@@ -9,7 +9,7 @@ import us_icon from "../../img/us_icon.png";
 const Navbar = () => {
   const [lang, setLang] = useState("HE");
 
-  const language = lang => {
+  const language = (lang) => {
     setLang(lang);
   };
 
@@ -93,17 +93,17 @@ const Navbar = () => {
   );
 };
 
-const mapStateToProps = state => {
+const mapStateToProps = (state) => {
   return {
     page: state.page,
-    pageTitle: state.pageTitle
+    pageTitle: state.pageTitle,
   };
 };
 
-const mapDispatchToProps = dispatch => {
+const mapDispatchToProps = (dispatch) => {
   return {
-    switchPageStatus: page =>
-      dispatch({ type: actionType.CURRENT_PAGE, pageName: page })
+    switchPageStatus: (page) =>
+      dispatch({ type: actionType.CURRENT_PAGE, pageName: page }),
   };
 };
 

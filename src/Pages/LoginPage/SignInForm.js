@@ -1,12 +1,12 @@
-import React, { Component } from 'react';
-import FacebookLogin from 'react-facebook-login';
-import { properties } from './../../properties.js';
-import { connect } from 'react-redux';
-import * as actionType from '../../Store/actions';
-import GoogleLoginButton from './GoogleLoginButton/googleLoginButton';
-import axios from 'axios';
-import './SignInForm.css';
-import api from '../../Store/api';
+import React, { Component } from "react";
+import FacebookLogin from "react-facebook-login";
+import { properties } from "./../../properties.js";
+import { connect } from "react-redux";
+import * as actionType from "../../Store/actions";
+import GoogleLoginButton from "./GoogleLoginButton/googleLoginButton";
+import axios from "axios";
+import "./SignInForm.css";
+import api from "../../Store/api";
 
 // const SignInForm = props => {
 //   return (
@@ -42,29 +42,23 @@ import api from '../../Store/api';
 //             </div>
 
 class SignInForm extends React.Component {
+  fbLoginClicked() {}
 
-	fbLoginClicked() {
+  fbLoginResponseCallback(response) {
+    // postMessage(response, "https://localhost:3001/facebook/auth");
 
-	}
-  
-	fbLoginResponseCallback(response) {
-		// postMessage(response, "https://localhost:3001/facebook/auth");
-		
+    axios.post("http://localhost:3001/auth/fb", response).then((res) => {
+      if (!res.data) {
+        console.log(res);
+      }
+    });
 
-		axios
-        .post("http://localhost:3001/auth/fb", response)
-        .then(res => {
-            if (!res.data) {
-                console.log(res);
-            }
-		});
-		
-	 	console.log(response);
-	}
+    console.log(response);
+  }
 
   signup = this.props.location.pathname.split("/")[1] === "signup";
 
-  handleSubmit = async event => {
+  handleSubmit = async (event) => {
     event.preventDefault();
     console.log(event.target.email.value);
     console.log(event.target.password.value);
@@ -72,16 +66,15 @@ class SignInForm extends React.Component {
     api
       .post(path, {
         email: event.target.email.value,
-        password: event.target.password.value
+        password: event.target.password.value,
       })
       .then(() => {
         console.log("success");
       })
-      .catch(error => {
+      .catch((error) => {
         console.log(error);
       });
   };
-
 
   render() {
     console.log(this.props);
@@ -126,18 +119,18 @@ class SignInForm extends React.Component {
               <GoogleLoginButton />
             </form>
 
+            <hr data-content="Or" class="hr-text" />
 
-			<hr data-content="Or" class="hr-text" />
+            <GoogleLoginButton />
 
-			<GoogleLoginButton/>
-
-			<FacebookLogin
-				cssClass="loginBtn loginBtn--facebook"
-				appId={properties.FB_APP_ID}
-				autoLoad={true}
-				fields={properties.FB_LOGIN_FIELDS}
-				onClick={this.fbLoginClicked}
-				callback={this.fbLoginResponseCallback} />
+            <FacebookLogin
+              cssClass="loginBtn loginBtn--facebook"
+              appId={properties.FB_APP_ID}
+              autoLoad={true}
+              fields={properties.FB_LOGIN_FIELDS}
+              onClick={this.fbLoginClicked}
+              callback={this.fbLoginResponseCallback}
+            />
           </div>
         </div>
       </div>
@@ -145,17 +138,17 @@ class SignInForm extends React.Component {
   }
 }
 
-const mapStateToProps = state => {
+const mapStateToProps = (state) => {
   return {
     page: state.page,
-    pageTitle: state.pageTitle
+    pageTitle: state.pageTitle,
   };
 };
 
-const mapDispatchToProps = dispatch => {
+const mapDispatchToProps = (dispatch) => {
   return {
-    switchPageStatus: page =>
-      dispatch({ type: actionType.CURRENT_PAGE, pageName: page })
+    switchPageStatus: (page) =>
+      dispatch({ type: actionType.CURRENT_PAGE, pageName: page }),
   };
 };
 
