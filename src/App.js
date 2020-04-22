@@ -9,10 +9,9 @@ import OneTimeForm from "./Pages/OneTimeForm/oneTimeForm";
 import GoogleLoginButton from "./Pages/LoginPage/GoogleLoginButton/googleLoginButton";
 import Info from "./Pages/Info/Info";
 import Tips from "./Pages/Tips/tips";
-import HomePage from './Pages/HomePage/HomePage';
+import HomePage from "./Pages/HomePage/HomePage";
 
 function App() {
-
   return (
     <div className="App">
       <Navbar />

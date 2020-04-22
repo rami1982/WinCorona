@@ -1,19 +1,19 @@
 import React, { useEffect } from "react";
 import "./googleLoginBtn.css";
 
-const GoogleLoginButton = props => {
-  useEffect(() => {
-    googleSDK();
+export class GoogleLoginButton extends React.Component {
+  componentDidMount() {
+    this.googleSDK();
     console.log("sfsfd");
-  });
+  }
 
-  const prepareLoginButton = () => {
+  prepareLoginButton = () => {
     console.log(this.refs.googleLoginBtn);
 
     this.auth2.attachClickHandler(
       this.refs.googleLoginBtn,
       {},
-      googleUser => {
+      (googleUser) => {
         let profile = googleUser.getBasicProfile();
         console.log("Token || " + googleUser.getAuthResponse().id_token);
         console.log("ID: " + profile.getId());
@@ -22,20 +22,20 @@ const GoogleLoginButton = props => {
         console.log("Email: " + profile.getEmail());
         //YOUR CODE HERE
       },
-      error => {
+      (error) => {
         alert(JSON.stringify(error, undefined, 2));
       }
     );
   };
 
-  const googleSDK = () => {
+  googleSDK = () => {
     window["googleSDKLoaded"] = () => {
       window["gapi"].load("auth2", () => {
         this.auth2 = window["gapi"].auth2.init({
           client_id:
             "62390390007-a4gftclg2bto9lnctfr0ngns36h20dm2.apps.googleusercontent.com",
           cookiepolicy: "single_host_origin",
-          scope: "profile email"
+          scope: "profile email",
         });
         this.prepareLoginButton();
       });
@@ -54,13 +54,15 @@ const GoogleLoginButton = props => {
     })(document, "script", "google-jssdk");
   };
 
-  return (
-    <div class="google-login">
-      <button className="loginBtn loginBtn--google" ref="googleLoginBtn">
-        Login with Google
-      </button>{" "}
-    </div>
-  );
-};
+  render() {
+    return (
+      <div className="google-login">
+        <button className="loginBtn loginBtn--google" ref="googleLoginBtn">
+          Login with Google
+        </button>{" "}
+      </div>
+    );
+  }
+}
 
 export default GoogleLoginButton;

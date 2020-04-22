@@ -84,18 +84,13 @@ const Navbar = () => {
 
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav mr-auto">
-            {/* <li className="nav-item active">
-              <NavLink className="nav-link" to="/">
-                Home <span className="sr-only">(current)</span>
-              </NavLink>
-            </li> */}
             <li className="nav-item active">
               <NavLink className="nav-link " to="/formpage">
                 Form
               </NavLink>
             </li>
             <li className="nav-item active">
-              <NavLink className="nav-link " to="/Onetimeform">
+              <NavLink className="nav-link " to="/onetimeform">
                 One Time Form
               </NavLink>
             </li>
@@ -110,11 +105,11 @@ const Navbar = () => {
               </NavLink>
             </li>
           </ul>
-          {/* <span class="navbar-text">
+          <span class="navbar-text">
             <NavLink className="nav-link " to="/signin">
               Sign-in/Login
             </NavLink>
-          </span> */}
+          </span>
         </div>
       </nav>
     </div>
