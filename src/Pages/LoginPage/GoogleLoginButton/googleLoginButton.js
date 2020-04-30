@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import api from "../../../Store/api";
 import "./googleLoginBtn.css";
 
 export class GoogleLoginButton extends React.Component {
@@ -21,6 +22,20 @@ export class GoogleLoginButton extends React.Component {
         console.log("Image URL: " + profile.getImageUrl());
         console.log("Email: " + profile.getEmail());
         //YOUR CODE HERE
+
+        api
+          .post("/auth/signup", {
+            email: profile.getEmail(),
+            password: googleUser.getAuthResponse().id_token,
+          })
+          .then(
+            (response) => {
+              console.log(response);
+            },
+            (error) => {
+              console.log(error);
+            }
+          );
       },
       (error) => {
         alert(JSON.stringify(error, undefined, 2));

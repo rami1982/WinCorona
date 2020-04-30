@@ -8,46 +8,13 @@ import axios from "axios";
 import "./SignInForm.css";
 import api from "../../Store/api";
 
-// const SignInForm = props => {
-//   return (
-//     <div className="container vh-100">
-//       <div
-//         className="d-flex justify-content-center align-items-center h-100"
-//         style={{ backgroundColor: "#ebf5f2" }}
-//       >
-//         <div className="d-flex flex-column justify-content-center h-100">
-//           <h1 className=" mb-5">{props.header}</h1>
-//           <form className="mt-5">
-//             <div className="form-group">
-//               <label for="exampleInputEmail1">Email address</label>
-//               <input
-//                 type="email"
-//                 className="form-control"
-//                 id="exampleInputEmail1"
-//                 aria-describedby="emailHelp"
-//                 placeholder="Enter email"
-//               />
-//               <small id="emailHelp" className="form-text text-muted">
-//                 We'll never share your email with anyone else.
-//               </small>
-//             </div>
-//             <div className="form-group">
-//               <label for="exampleInputPassword1">Password</label>
-//               <input
-//                 type="password"
-//                 className="form-control"
-//                 id="exampleInputPassword1"
-//                 placeholder="Password"
-//               />
-//             </div>
-
 class SignInForm extends React.Component {
   fbLoginClicked() {}
 
   fbLoginResponseCallback(response) {
     // postMessage(response, "https://localhost:3001/facebook/auth");
 
-    axios.post("http://localhost:3001/auth/fb", response).then((res) => {
+    axios.post("http://localhost:3001/auth/signin", response).then((res) => {
       if (!res.data) {
         console.log(res);
       }
